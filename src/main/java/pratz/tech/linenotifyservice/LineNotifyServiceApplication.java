@@ -76,8 +76,8 @@ public class LineNotifyServiceApplication {
         headers.add("Authorization", "Bearer "+access_token);
         MultiValueMap<String, String> body = new LinkedMultiValueMap<String, String>();
         body.add("message", "Your api key is "+access_token+", you can notify by this way \ncurl --location --request POST 'https://notify-api.line.me/api/notify' \\\n" +
-                "--header 'Content-Type: application/x-www-form-urlencoded' \\\n" +
-                "--header 'Authorization: Bearer "+access_token+"' \\\n" +
+                "--header 'Content-Type: application/x-www-form-urlencoded' \n" +
+                "--header 'Authorization: Bearer "+access_token+"' \n" +
                 "--data-urlencode 'message=<your message>'");
         ResponseEntity<String> json = restTemplate.exchange(
                 "https://notify-api.line.me/api/notify", HttpMethod.POST,
