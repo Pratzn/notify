@@ -53,7 +53,7 @@ public class LineNotifyServiceApplication {
         MultiValueMap<String, String> body = new LinkedMultiValueMap<String, String>();
         body.add("client_id", "LovbFdIcGqmnyWyCE6QUSj");
         body.add("client_secret", "G3Jw0kxgpKLyaEJboCJTwheyAe7UWNFlT5XBftvOKeI");
-        body.add("redirect_uri", "http://nudklin.ddns.net:8080/callback");
+        body.add("redirect_uri", "https://notifyz.herokuapp.com/callback");
         body.add("code", code);
         body.add("grant_type", "authorization_code");
         ResponseEntity<String> json = restTemplate.exchange(
