@@ -1,0 +1,1 @@
+web: java -jar target/line-notify-service-0.1.jar
