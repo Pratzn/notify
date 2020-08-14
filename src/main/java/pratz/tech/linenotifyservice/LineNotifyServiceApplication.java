@@ -68,7 +68,7 @@ public class LineNotifyServiceApplication {
         return ResponseEntity.ok().build();
     }
 
-    @RequestMapping(value = "/notify",method = RequestMethod.POST)
+    @RequestMapping(value = "/notify",method = {RequestMethod.POST,RequestMethod.GET})
     public ResponseEntity<?> notify(@RequestParam(value = "access_token",required = true) String access_token){
 
         HttpHeaders headers = new HttpHeaders();
